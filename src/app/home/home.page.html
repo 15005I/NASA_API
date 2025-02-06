@@ -1,4 +1,5 @@
 <ion-content class="ion-padding">
+  <div><input type="date" [formControl]="date"></div>
     <ng-container *ngIf="imageData; else loading">
       <ion-card>
         <img [src]="imageData.url" alt="NASA Image of the Day"/>
@@ -8,7 +9,7 @@
 
       <ion-card-content>
         <p>{{ imageData.explanation }}</p>
-        <p><strong>Date:</strong>{{imageData.date}}</p>
+        <p><strong>Date:</strong>{{ imageData.date }}</p>
       </ion-card-content>
       </ion-card>
     </ng-container>
